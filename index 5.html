@@ -1,0 +1,825 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Freecash - Get Paid for Games &amp; Surveys | Earn Real Cash</title>
+<meta name="description" content="Earn free cash by completing offers, playing games and surveys. Cash out via PayPal, Bitcoin, Amazon, and more! With instant deposit & withdrawal options."/>
+<style>
+:root{--bg:#141523;--card:#1e1f30;--grn:#01D676;--w:#fff;--g:#888;--b:#2a2b40;--red:#ef4444;--gold:#fbbf24;--blue:#3b82f6;--nav-bg:#1a1e2e}
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Oxygen,Ubuntu,sans-serif;background:var(--bg);color:var(--w);min-height:100vh;padding-bottom:80px}
+::-webkit-scrollbar{width:6px}
+::-webkit-scrollbar-track{background:var(--bg)}
+::-webkit-scrollbar-thumb{background:#333;border-radius:3px}
+.hdr{display:flex;align-items:center;padding:12px 20px;border-bottom:1px solid rgba(255,255,255,.06);position:sticky;top:0;background:var(--nav-bg);z-index:100;gap:16px}
+.logo{font-size:24px;font-weight:800;color:var(--grn);white-space:nowrap}
+.logo span{color:var(--w);font-weight:600}
+.nav-links{display:flex;gap:4px}
+.nav-links a{color:var(--g);text-decoration:none;padding:6px 14px;border-radius:20px;font-size:13px;font-weight:600;transition:.2s}
+.nav-links a:hover{color:var(--w);background:rgba(255,255,255,.05)}
+.nav-links a.active{background:var(--grn);color:var(--bg)}
+.hdr-right{margin-left:auto;display:flex;align-items:center;gap:10px}
+.btn{padding:8px 18px;border-radius:20px;border:none;cursor:pointer;font-weight:600;font-size:13px;transition:.2s}
+.btn:hover{opacity:.85;transform:translateY(-1px)}
+.btn-outline{background:transparent;color:var(--w);border:1px solid rgba(255,255,255,.2)}
+.btn-primary{background:var(--grn);color:var(--bg)}
+.btn-danger{background:var(--red);color:#fff}
+.btn-gold{background:linear-gradient(135deg,#fbbf24,#f59e0b);color:#000}
+.btn-blue{background:var(--blue);color:#fff}
+.btn-sm{padding:6px 12px;font-size:11px}
+.btn-lg{padding:12px 32px;font-size:15px}
+.btn-full{width:100%}
+.balance-chip{background:rgba(1,214,118,.15);color:var(--grn);padding:6px 14px;border-radius:20px;font-weight:700;font-size:13px;cursor:pointer;border:1px solid rgba(1,214,118,.3);transition:.2s}
+.balance-chip:hover{background:rgba(1,214,118,.25)}
+.main{max-width:1200px;margin:0 auto;padding:24px 20px}
+.pt{font-size:28px;font-weight:800;margin-bottom:6px}
+.ps{color:var(--g);font-size:14px;margin-bottom:28px}
+.section-title{font-size:18px;font-weight:700;margin:36px 0 16px;color:var(--grn);display:flex;align-items:center;gap:8px}
+.cg{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:12px}
+.cd{background:var(--card);border-radius:14px;padding:18px;display:flex;align-items:center;gap:14px;cursor:pointer;transition:.2s;border:1px solid transparent}
+.cd:hover{border-color:var(--grn);transform:translateY(-3px)}
+.cd .ci{width:48px;height:48px;border-radius:12px;display:flex;align-items:center;justify-content:center;font-size:18px;font-weight:700;flex-shrink:0}
+.cd .info{flex:1;min-width:0}
+.cd .info h4{font-size:13px;margin-bottom:3px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.cd .info .rt{font-size:11px;color:#FFB800}
+.offer-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:14px}
+.offer-card{background:var(--card);border-radius:16px;overflow:hidden;transition:.2s;border:1px solid transparent;cursor:pointer}
+.offer-card:hover{border-color:var(--grn);transform:translateY(-3px)}
+.offer-img{height:140px;background:linear-gradient(135deg,#1a3a2a,#0d2818);display:flex;align-items:center;justify-content:center;font-size:48px}
+.offer-body{padding:16px}
+.offer-body h4{font-size:15px;margin-bottom:6px}
+.offer-body .desc{font-size:12px;color:var(--g);margin-bottom:10px;line-height:1.5}
+.offer-body .reward{font-size:20px;font-weight:800;color:var(--grn)}
+.offer-body .stars{color:var(--gold);font-size:13px;margin-top:4px}
+.evt{background:linear-gradient(135deg,#FF6B6B,#FF8E53);border-radius:20px;padding:48px 28px;text-align:center;margin-bottom:28px;position:relative;overflow:hidden}
+.evt::before{content:'';position:absolute;top:-50%;left:-50%;width:200%;height:200%;background:radial-gradient(circle,rgba(255,255,255,.1) 0%,transparent 60%)}
+.evt h1{font-size:38px;font-weight:900;position:relative}
+.evt .prz{font-size:56px;font-weight:900;margin:12px 0;position:relative}
+.evt p{font-size:15px;opacity:.9;position:relative}
+.stat-row{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin:20px 0}
+.stat-item{background:rgba(255,255,255,.04);border-radius:12px;padding:18px;text-align:center}
+.stat-item .val{font-size:24px;font-weight:800;color:var(--grn)}
+.stat-item .lbl{font-size:11px;color:var(--g);margin-top:4px}
+.profile-hero{background:linear-gradient(135deg,#1e1f30,#2a2b40);border-radius:20px;padding:40px;text-align:center;margin-bottom:28px}
+.avatar{width:90px;height:90px;border-radius:50%;background:var(--grn);margin:0 auto 16px;display:flex;align-items:center;justify-content:center;font-size:38px;font-weight:800;color:var(--bg)}
+.profile-hero .username{font-size:22px;font-weight:700}
+.profile-hero .email{color:var(--g);margin-top:4px;font-size:14px}
+.profile-hero .level-badge{display:inline-block;background:rgba(1,214,118,.15);color:var(--grn);padding:4px 16px;border-radius:20px;font-size:13px;font-weight:600;margin-top:10px}
+.how-it-works{background:var(--card);border-radius:20px;padding:36px;text-align:center;margin-bottom:28px}
+.how-it-works .hiw-icon{width:80px;height:80px;background:var(--grn);border-radius:50%;margin:0 auto 16px;display:flex;align-items:center;justify-content:center;font-size:36px;font-weight:700;color:var(--bg)}
+.wallet-bar{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-bottom:24px}
+.wallet-card{background:var(--card);border-radius:14px;padding:20px}
+.wallet-card .wl{font-size:12px;color:var(--g);margin-bottom:6px;text-transform:uppercase;letter-spacing:.5px}
+.wallet-card .wv{font-size:26px;font-weight:800}
+.wallet-card .wv.green{color:var(--grn)}
+.wallet-card .wsub{font-size:11px;color:var(--g);margin-top:4px}
+.wallet-actions{display:flex;gap:10px;margin-bottom:24px;flex-wrap:wrap}
+.tx-table{width:100%;border-collapse:collapse}
+.tx-table th{text-align:left;padding:12px 16px;font-size:11px;color:var(--g);text-transform:uppercase;letter-spacing:.5px;border-bottom:1px solid rgba(255,255,255,.06)}
+.tx-table td{padding:14px 16px;font-size:13px;border-bottom:1px solid rgba(255,255,255,.04)}
+.tx-table tr:hover td{background:rgba(255,255,255,.02)}
+.tx-badge{display:inline-block;padding:3px 10px;border-radius:12px;font-size:11px;font-weight:600}
+.tx-badge.deposit{background:rgba(1,214,118,.15);color:var(--grn)}
+.tx-badge.withdraw{background:rgba(239,68,68,.15);color:var(--red)}
+.tx-badge.earn{background:rgba(59,130,246,.15);color:var(--blue)}
+.tx-badge.bonus{background:rgba(251,191,36,.15);color:var(--gold)}
+.tx-status{display:inline-block;padding:3px 10px;border-radius:12px;font-size:10px;font-weight:600}
+.tx-status.completed{background:rgba(1,214,118,.15);color:var(--grn)}
+.tx-status.pending{background:rgba(251,191,36,.15);color:var(--gold)}
+.tx-status.failed{background:rgba(239,68,68,.15);color:var(--red)}
+.cashout-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(140px,1fr));gap:10px}
+.cashout-card{background:var(--card);border-radius:12px;padding:20px 12px;text-align:center;cursor:pointer;transition:.2s;border:1px solid transparent}
+.cashout-card:hover{border-color:var(--grn);transform:translateY(-2px)}
+.cashout-card .co-icon{font-size:28px;margin-bottom:8px}
+.cashout-card .co-name{font-size:12px;font-weight:600}
+.cashout-card .co-min{font-size:10px;color:var(--g);margin-top:3px}
+.modal-overlay{display:none;position:fixed;inset:0;background:rgba(0,0,0,.75);z-index:300;align-items:center;justify-content:center;padding:20px}
+.modal-overlay.show{display:flex}
+.modal{background:var(--card);border-radius:18px;padding:28px;width:100%;max-width:460px;max-height:90vh;overflow-y:auto;animation:modalIn .25s ease}
+@keyframes modalIn{from{opacity:0;transform:scale(.95) translateY(10px)}to{opacity:1;transform:scale(1) translateY(0)}}
+.modal h3{font-size:22px;margin-bottom:20px}
+.modal-close{float:right;background:none;border:none;color:var(--g);font-size:22px;cursor:pointer;padding:4px 8px;border-radius:6px}
+.modal-close:hover{background:rgba(255,255,255,.1);color:var(--w)}
+.tabs{display:flex;gap:8px;margin-bottom:20px}
+.tab-btn{flex:1;padding:10px;border-radius:10px;border:1px solid rgba(255,255,255,.1);background:transparent;color:var(--g);cursor:pointer;font-weight:600;font-size:13px;transition:.2s}
+.tab-btn.active{background:var(--grn);color:var(--bg);border-color:var(--grn)}
+.tab-panel{display:none}
+.tab-panel.active{display:block}
+.form-group{margin-bottom:16px}
+.form-group label{display:block;font-size:12px;color:var(--g);margin-bottom:6px;text-transform:uppercase;letter-spacing:.5px;font-weight:600}
+.form-input{width:100%;padding:12px 14px;border-radius:10px;border:1px solid rgba(255,255,255,.12);background:var(--b);color:var(--w);font-size:14px;transition:.2s}
+.form-input:focus{outline:none;border-color:var(--grn)}
+select.form-input{cursor:pointer}
+.input-row{display:flex;gap:8px}
+.input-row .form-input{flex:1}
+.fee-note{font-size:12px;color:var(--gold);margin-top:6px;padding:8px 12px;background:rgba(251,191,36,.08);border-radius:8px}
+.checkbox-label{display:flex;align-items:center;gap:8px;font-size:13px;color:var(--g);cursor:pointer}
+.form-error{color:var(--red);font-size:12px;margin-top:4px;display:none}
+.form-error.show{display:block}
+.qr-box{background:#fff;border-radius:12px;padding:24px;text-align:center;margin:16px 0}
+.qr-box .qr-code{width:140px;height:140px;margin:0 auto;background:repeating-linear-gradient(45deg,#000 0px,#000 8px,#fff 8px,#fff 16px);border-radius:8px;display:flex;align-items:center;justify-content:center}
+.qr-box .qr-code span{font-size:36px;background:#fff;width:50px;height:50px;border-radius:6px;display:flex;align-items:center;justify-content:center}
+.address-copy{display:flex;gap:8px}
+.address-copy input{flex:1;font-size:12px;font-family:monospace}
+.deposit-warning{font-size:11px;color:var(--red);margin-top:8px;text-align:center;padding:8px;background:rgba(239,68,68,.08);border-radius:8px}
+.toast{position:fixed;bottom:30px;left:50%;transform:translateX(-50%);background:var(--card);border:1px solid var(--grn);color:var(--w);padding:14px 24px;border-radius:12px;font-weight:600;z-index:500;display:none;animation:toastIn .3s ease;box-shadow:0 8px 32px rgba(0,0,0,.4)}
+.toast.show{display:block}
+@keyframes toastIn{from{opacity:0;transform:translateX(-50%) translateY(20px)}to{opacity:1;transform:translateX(-50%) translateY(0)}}
+.bnav{display:none;position:fixed;bottom:0;left:0;right:0;background:var(--card);border-top:1px solid rgba(255,255,255,.06);padding:8px 0;z-index:200}
+.bnav a{flex:1;display:flex;flex-direction:column;align-items:center;gap:3px;color:var(--g);text-decoration:none;font-size:10px;padding:6px 0}
+.bnav a.active{color:var(--grn)}
+.bnav a svg{width:20px;height:20px}
+.social-login{display:flex;flex-direction:column;gap:10px;margin-top:20px}
+.social-btn{display:flex;align-items:center;justify-content:center;gap:10px;padding:12px;border-radius:10px;border:1px solid rgba(255,255,255,.15);background:var(--b);color:var(--w);cursor:pointer;font-weight:600;font-size:14px;transition:.2s}
+.social-btn:hover{background:rgba(255,255,255,.08)}
+.divider{text-align:center;color:var(--g);font-size:12px;margin:16px 0;position:relative}
+.divider::before,.divider::after{content:'';position:absolute;top:50%;width:40%;height:1px;background:rgba(255,255,255,.1)}
+.divider::before{left:0}
+.divider::after{right:0}
+.leaderboard-item{display:flex;align-items:center;gap:12px;padding:14px 0;border-bottom:1px solid rgba(255,255,255,.04)}
+.leaderboard-item:last-child{border-bottom:none}
+.lb-rank{font-size:18px;font-weight:800;width:40px}
+.lb-name{flex:1;font-size:14px}
+.lb-earned{font-weight:700;color:var(--grn);font-size:14px}
+.footer{border-top:1px solid rgba(255,255,255,.06);padding:24px 20px;text-align:center;margin-top:40px}
+.footer a{color:var(--g);text-decoration:none;font-size:13px;margin:0 12px}
+.footer a:hover{color:var(--w)}
+.page-section{margin-bottom:40px}
+@media(max-width:900px){.wallet-bar{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:768px){.hdr{padding:10px 14px;gap:8px}.nav-links{display:none}.bnav{display:flex}body{padding-bottom:70px}.pt{font-size:22px}.evt{padding:32px 16px}.evt h1{font-size:26px}.evt .prz{font-size:38px}.wallet-bar{grid-template-columns:1fr 1fr}.cg{grid-template-columns:repeat(2,1fr)}.offer-grid{grid-template-columns:1fr}.tx-table th,.tx-table td{padding:8px 6px}.tx-table{font-size:11px}.cashout-grid{grid-template-columns:repeat(3,1fr)}.profile-hero{padding:28px 16px}}
+@media(max-width:480px){.wallet-bar{grid-template-columns:1fr}.stat-row{gap:6px}.stat-item{padding:12px 8px}.stat-item .val{font-size:18px}.cg{grid-template-columns:1fr 1fr;gap:8px}.cashout-grid{grid-template-columns:repeat(2,1fr)}}
+</style></head>
+
+
+<body>
+<header class="hdr">
+<div class="logo">free<span>cash</span></div>
+<nav class="nav-links" id="desktopNav">
+<a href="#" onclick="navigate('earn');return false;" class="active" data-page="earn">Earn</a>
+<a href="#" onclick="navigate('cashout');return false;" data-page="cashout">Cashout</a>
+<a href="#" onclick="navigate('event');return false;" data-page="event">Event</a>
+<a href="#" onclick="navigate('wallet');return false;" data-page="wallet">Wallet</a>
+<a href="#" onclick="navigate('profile');return false;" data-page="profile">Profile</a>
+</nav>
+<div class="hdr-right">
+<div class="balance-chip" id="headerBalance" onclick="navigate('wallet');">$<span id="headerBalanceVal">0.00</span></div>
+<button class="btn btn-outline btn-sm" id="headerSignIn" onclick="openAuth('in')">Sign In</button>
+<button class="btn btn-primary btn-sm" id="headerSignUp" onclick="openAuth('up')">Sign Up</button>
+<button class="btn btn-outline btn-sm" id="headerLogout" style="display:none;" onclick="logout()">Logout</button>
+</div>
+</header>
+
+<main class="main" id="mainContent"></main>
+
+<nav class="bnav" id="bottomNav">
+<a href="#" class="active" onclick="navigate('earn');return false;" data-page="earn"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1.41 16.09V20h-2.67v-1.93c-1.71-.36-3.16-1.46-3.27-3.4h1.96c.1 1.05.82 1.87 2.65 1.87 1.96 0 2.4-.98 2.4-1.59 0-.83-.44-1.61-2.67-2.14-2.48-.6-4.18-1.62-4.18-3.67 0-1.72 1.39-2.84 3.11-3.21V4h2.67v1.95c1.86.45 2.79 1.86 2.85 3.39H14.3c-.05-1.11-.64-1.87-2.22-1.87-1.5 0-2.4.68-2.4 1.64 0 .84.65 1.39 2.67 1.91 2.65.62 4.18 1.63 4.18 3.91 0 1.87-1.09 3.15-3.12 3.47z"/></svg>Earn</a>
+<a href="#" onclick="navigate('cashout');return false;" data-page="cashout"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M11.8 10.9c-2.27-.59-3-1.2-3-2.15 0-1.09 1.01-1.85 2.7-1.85 1.78 0 2.44.85 2.5 2.1h2.21c-.07-1.72-1.12-3.3-3.21-3.81V3h-3v2.16c-1.94.42-3.5 1.68-3.5 3.61 0 2.31 1.91 3.46 4.7 4.13 2.5.6 3 1.48 3 2.41 0 .69-.49 1.79-2.7 1.79-2.06 0-2.87-.92-2.98-2.1h-2.2c.12 2.19 1.76 3.42 3.68 3.83V21h3v-2.15c1.95-.37 3.5-1.5 3.5-3.55 0-2.84-2.43-3.81-4.7-4.4z"/></svg>Cashout</a>
+<a href="#" onclick="navigate('event');return false;" data-page="event"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>Event</a>
+<a href="#" onclick="navigate('wallet');return false;" data-page="wallet"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M21 18v1c0 1.1-.9 2-2 2H5c-1.11 0-2-.9-2-2V5c0-1.1.89-2 2-2h14c1.1 0 2 .9 2 2v1h-9c-1.11 0-2 .9-2 2v8c0 1.1.89 2 2 2h9zm-9-2h10V8H12v8zm4-2.5c-.83 0-1.5-.67-1.5-1.5s.67-1.5 1.5-1.5 1.5.67 1.5 1.5-.67 1.5-1.5 1.5z"/></svg>Wallet</a>
+<a href="#" onclick="navigate('profile');return false;" data-page="profile"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/></svg>Profile</a>
+</nav>
+
+<div class="modal-overlay" id="authModal"><div class="modal">
+<button class="modal-close" onclick="closeAuth()">&times;</button>
+<h3 id="authTitle">Sign In</h3>
+<form id="authForm" onsubmit="handleAuth(event)">
+<div class="form-group"><label>Email</label><input type="email" class="form-input" placeholder="you@email.com" required id="authEmail"/></div>
+<div class="form-group" id="authNameGroup" style="display:none;"><label>Username</label><input type="text" class="form-input" id="authName"/></div>
+<div class="form-group"><label>Password</label><input type="password" class="form-input" required id="authPassword" minlength="6"/></div>
+<button type="submit" class="btn btn-primary" style="width:100%;padding:12px;">Continue</button>
+</form>
+<div class="divider">Or continue with</div>
+<div class="social-login">
+<button class="social-btn" onclick="socialLogin('google')">Google</button>
+<button class="social-btn" onclick="socialLogin('twitter')">Twitter</button>
+<button class="social-btn" onclick="socialLogin('wallet')">Crypto Wallet</button>
+</div>
+<p style="text-align:center;font-size:12px;color:var(--g);margin-top:16px;" id="authSwitch">Don't have an account? <a href="#" style="color:var(--grn);" onclick="toggleAuthMode(event)">Sign Up</a></p>
+</div></div>
+
+<div class="modal-overlay" id="depositModal"><div class="modal">
+<button class="modal-close" onclick="closeModal('depositModal')">&times;</button>
+<h3>Deposit Funds</h3>
+<div class="tabs"><button class="tab-btn active" onclick="switchDepositTab('crypto',this)">Crypto</button><button class="tab-btn" onclick="switchDepositTab('fiat',this)">Bank</button><button class="tab-btn" onclick="switchDepositTab('card',this)">Card</button></div>
+<div class="tab-panel active" id="depositCrypto">
+<div class="form-group"><label>Select Coin</label><select class="form-input" id="depositCoin" onchange="updateDepositInfo()"><option value="BTC">Bitcoin (BTC)</option><option value="ETH">Ethereum (ETH)</option><option value="SOL">Solana (SOL)</option><option value="USDT">Tether (USDT)</option><option value="USDC">USD Coin (USDC)</option><option value="LTC">Litecoin (LTC)</option><option value="DOGE">Dogecoin (DOGE)</option></select></div>
+<div class="form-group"><label>Network</label><select class="form-input" id="depositNetwork"><option value="native">Native</option><option value="bep20">BEP-20</option><option value="erc20">ERC-20</option><option value="trc20">TRC-20</option></select></div>
+<div class="qr-box"><div class="qr-code"><span id="depositCoinIcon">B</span></div><p style="color:#000;font-size:12px;margin-top:8px;">Scan QR Code</p></div>
+<div class="form-group"><label>Address</label><div class="address-copy"><input type="text" class="form-input" id="depositAddress" value="bc1qar0srrr7xfkvy5l643lydnw9re59gtzzwf5mdq" readonly/><button class="btn btn-outline btn-sm" onclick="copyAddress()">Copy</button></div></div>
+<p class="deposit-warning">Send only <strong id="depositCoinName">BTC</strong> to this address.</p>
+<div class="form-group"><label>Amount</label><input type="number" class="form-input" id="cryptoDepositAmount" placeholder="0.00" step="any"/></div>
+<button class="btn btn-primary btn-lg btn-full" onclick="submitCryptoDeposit()">Submit Deposit</button>
+</div>
+<div class="tab-panel" id="depositFiat">
+<div class="form-group"><label>Amount (USD)</label><input type="number" class="form-input" id="fiatAmount" placeholder="Min. $10" min="10"/></div>
+<div class="form-group"><label>Bank Account</label><select class="form-input"><option>Chase - ****4521</option><option>Bank of America - ****7832</option></select></div>
+<p class="fee-note">1-3 business days. Free.</p>
+<button class="btn btn-primary btn-lg btn-full" onclick="submitFiatDeposit()">Deposit via ACH</button>
+</div>
+<div class="tab-panel" id="depositCard">
+<div class="form-group"><label>Amount (USD)</label><input type="number" class="form-input" id="cardAmount" placeholder="Min. $10" min="10"/></div>
+<div class="form-group"><label>Card Number</label><input type="text" class="form-input" placeholder="1234 5678 9012 3456"/></div>
+<div class="input-row"><div class="form-group"><label>Expiry</label><input type="text" class="form-input" placeholder="MM/YY"/></div><div class="form-group"><label>CVC</label><input type="text" class="form-input" placeholder="123"/></div></div>
+<p class="fee-note">3.5% fee. Instant.</p>
+<button class="btn btn-primary btn-lg btn-full" onclick="submitCardDeposit()">Deposit Instantly</button>
+</div>
+</div></div>
+
+<div class="modal-overlay" id="withdrawModal"><div class="modal">
+<button class="modal-close" onclick="closeModal('withdrawModal')">&times;</button>
+<h3>Withdraw Funds</h3>
+<div class="form-group"><label>Asset</label><select class="form-input" id="withdrawAsset" onchange="updateWithdrawInfo()"><option value="USD">USD</option><option value="BTC">BTC</option><option value="ETH">ETH</option><option value="SOL">SOL</option><option value="USDT">USDT</option><option value="LTC">LTC</option></select></div>
+<div class="form-group"><label>Amount</label><div class="input-row"><input type="number" class="form-input" id="withdrawAmount" placeholder="0.00" step="any" oninput="updateFeeHint()"/><button class="btn btn-outline btn-sm" onclick="setMaxWithdraw()">MAX</button></div><div class="fee-note" id="feeHint"></div></div>
+<div class="form-group"><label>Destination</label><input type="text" class="form-input" id="withdrawAddress" placeholder="Enter address..."/></div>
+<div class="form-group"><label class="checkbox-label"><input type="checkbox" id="withdrawConfirm"/> I confirm. Withdrawals cannot be reversed.</label></div>
+<div class="form-error" id="withdrawError"></div>
+<button class="btn btn-primary btn-lg btn-full" onclick="submitWithdraw()">Confirm Withdrawal</button>
+</div></div>
+
+<div class="modal-overlay" id="cashoutModal"><div class="modal"><button class="modal-close" onclick="closeModal('cashoutModal')">&times;</button><h3>Cash Out</h3><div id="cashoutModalContent"></div></div></div>
+
+<div class="toast" id="toast"></div>
+
+<script>
+var $ = function(s) { return document.querySelector(s); };
+var $$ = function(s) { return document.querySelectorAll(s); };
+
+var DEFAULT_USER = {
+    username:'FreeUser', email:'user@freecash.com', level:12,
+    totalEarned:0, balance:0, coins:0, isLoggedIn:false,
+    offersCompleted:102
+};
+
+var app = JSON.parse(localStorage.getItem('fc_app')) || {
+    user: JSON.parse(JSON.stringify(DEFAULT_USER)),
+    assets: { BTC:0, ETH:0, SOL:0, USDT:0, USDC:0, LTC:0, DOGE:0 },
+    transactions: [], currentPage: 'earn', authMode: 'in'
+};
+
+if (!app.user) app.user = JSON.parse(JSON.stringify(DEFAULT_USER));
+if (!app.assets) app.assets = {BTC:0,ETH:0,SOL:0,USDT:0,USDC:0,LTC:0,DOGE:0};
+
+function seedData() {
+    var now = Date.now(), day = 86400000;
+    app.transactions = [
+        {id:'tx-1',type:'earn',desc:'Sunshine Island - Reach Level 10',amount:12.50,coin:'USD',status:'completed',date:now-day*5},
+        {id:'tx-2',type:'earn',desc:'CPX Research Survey #4821',amount:3.75,coin:'USD',status:'completed',date:now-day*4},
+        {id:'tx-3',type:'earn',desc:'Match Masters - Win 5 Duels',amount:8.00,coin:'USD',status:'completed',date:now-day*3},
+        {id:'tx-4',type:'bonus',desc:'Daily Login Streak Bonus',amount:1.50,coin:'USD',status:'completed',date:now-day*2},
+        {id:'tx-5',type:'earn',desc:'Board Kings - Complete Tutorial',amount:5.00,coin:'USD',status:'completed',date:now-day*1},
+        {id:'tx-6',type:'bonus',desc:'Leaderboard Reward - Top 50',amount:25.00,coin:'USD',status:'completed',date:now-3600000*12},
+        {id:'tx-7',type:'earn',desc:'Dice Dreams - Reach Kingdom 3',amount:6.80,coin:'USD',status:'pending',date:now-1800000},
+        {id:'tx-8',type:'earn',desc:'BitLabs Survey #1294',amount:2.25,coin:'USD',status:'pending',date:now-900000},
+        {id:'tx-dep1',type:'deposit',desc:'Crypto Deposit - 0.05 BTC',amount:150.00,coin:'BTC',status:'completed',date:now-day*10,address:'bc1q...f5mdq'},
+        {id:'tx-dep2',type:'deposit',desc:'ACH Bank Transfer',amount:200.00,coin:'USD',status:'completed',date:now-day*8,address:'Chase ****4521'},
+        {id:'tx-w1',type:'withdraw',desc:'Withdrawal to PayPal',amount:-30.00,coin:'USD',status:'completed',date:now-day*6,address:'paypal@user.com'},
+        {id:'tx-dep3',type:'deposit',desc:'Card Deposit',amount:100.00,coin:'USD',status:'completed',date:now-day*2,address:'Visa ****8912'}
+    ];
+    var comps = app.transactions.filter(function(t){return t.status==='completed'&&t.type!=='withdraw';});
+    app.user.balance = 420 + comps.reduce(function(s,t){return s+t.amount;},0);
+    var es = app.transactions.filter(function(t){return t.status==='completed'&&(t.type==='earn'||t.type==='bonus');});
+    app.user.totalEarned = es.reduce(function(s,t){return s+t.amount;},0);
+    app.user.coins = Math.floor(app.user.balance * 1000);
+    app.assets.BTC = 0.05; app.assets.ETH = 0.5; app.assets.USDT = 500; app.assets.SOL = 2;
+    saveApp();
+}
+
+if (app.transactions.length === 0) seedData();
+
+function saveApp() { localStorage.setItem('fc_app', JSON.stringify(app)); }
+function openModal(id) { var m = $('#'+id); if(m) m.classList.add('show'); }
+function closeModal(id) { var m = $('#'+id); if(m) m.classList.remove('show'); }
+
+var toastTimer;
+function showToast(msg, borderColor) {
+    var t = $('#toast'); if(!t) return;
+    t.textContent = msg;
+    t.style.borderColor = borderColor || 'var(--grn)';
+    t.classList.add('show');
+    clearTimeout(toastTimer);
+    toastTimer = setTimeout(function() { t.classList.remove('show'); }, 3500);
+}
+
+function navigate(page) {
+    app.currentPage = page; saveApp(); renderPage(page);
+    $$('[data-page]').forEach(function(el) { el.classList.toggle('active', el.getAttribute('data-page')===page); });
+    window.scrollTo(0,0);
+}
+
+function renderPage(page) {
+    var main = $('#mainContent'); if(!main) return;
+    switch(page) {
+        case 'earn': main.innerHTML = renderEarnPage(); break;
+        case 'cashout': main.innerHTML = renderCashoutPage(); break;
+        case 'event': main.innerHTML = renderEventPage(); break;
+        case 'wallet': main.innerHTML = renderWalletPage(); break;
+        case 'profile': main.innerHTML = renderProfilePage(); break;
+        default: main.innerHTML = renderEarnPage();
+    }
+    updateHeaderBalance();
+    if(page === 'wallet') setTimeout(renderWalletTransactions, 50);
+}
+
+// ==================== AUTH ====================
+function openAuth(mode) {
+    app.authMode = mode;
+    var title = $('#authTitle'), nameGrp = $('#authNameGroup'), switchTxt = $('#authSwitch');
+    if(mode === 'up') {
+        if(title) title.textContent = 'Sign Up';
+        if(nameGrp) nameGrp.style.display = '';
+        if(switchTxt) switchTxt.innerHTML = 'Already have an account? <a href="#" style="color:var(--grn);" onclick="toggleAuthMode(event)">Sign In</a>';
+    } else {
+        if(title) title.textContent = 'Sign In';
+        if(nameGrp) nameGrp.style.display = 'none';
+        if(switchTxt) switchTxt.innerHTML = 'Don\'t have an account? <a href="#" style="color:var(--grn);" onclick="toggleAuthMode(event)">Sign Up</a>';
+    }
+    openModal('authModal');
+}
+function toggleAuthMode(e) { e.preventDefault(); openAuth(app.authMode==='up'?'in':'up'); }
+function closeAuth() { closeModal('authModal'); }
+
+function handleAuth(e) {
+    e.preventDefault();
+    var emailInput = $('#authEmail'), nameInput = $('#authName');
+    var email = (emailInput ? emailInput.value : '').trim();
+    var name = (nameInput ? nameInput.value : '').trim() || email.split('@')[0];
+    if(!email) return;
+    app.user.username = name; app.user.email = email; app.user.isLoggedIn = true;
+    if(app.authMode === 'up') {
+        app.user.balance = 0; app.user.totalEarned = 0; app.user.coins = 0; app.user.level = 1;
+        app.transactions = [];
+        app.assets = { BTC:0, ETH:0, SOL:0, USDT:0, USDC:0, LTC:0, DOGE:0 };
+    }
+    saveApp(); closeAuth(); updateHeaderBalance(); renderPage(app.currentPage);
+    showToast('\u2705 Welcome' + (app.authMode==='up'?'':' back') + ', ' + app.user.username + '!', 'var(--grn)');
+}
+
+function socialLogin(provider) {
+    app.user.isLoggedIn = true;
+    app.user.username = provider.charAt(0).toUpperCase() + provider.slice(1) + 'User';
+    saveApp(); closeAuth(); updateHeaderBalance(); renderPage(app.currentPage);
+    showToast('\u2705 Signed in with ' + provider + '!', 'var(--grn)');
+}
+
+function logout() {
+    app.user.isLoggedIn = false;
+    saveApp(); updateHeaderBalance(); renderPage(app.currentPage);
+    showToast('\uD83D\uDC4B Logged out successfully', 'var(--g)');
+}
+
+function updateHeaderBalance() {
+    var el = $('#headerBalanceVal'); if(el) el.textContent = (app.user.balance || 0).toFixed(2);
+    var si = $('#headerSignIn'), su = $('#headerSignUp'), lo = $('#headerLogout');
+    if(app.user.isLoggedIn) {
+        if(si) si.style.display = 'none';
+        if(su) su.style.display = 'none';
+        if(lo) lo.style.display = '';
+    } else {
+        if(si) si.style.display = '';
+        if(su) su.style.display = '';
+        if(lo) lo.style.display = 'none';
+    }
+}
+
+function requireLogin() {
+    if(!app.user.isLoggedIn) {
+        showToast('\uD83D\uDD10 Please sign in first!', 'var(--gold)');
+        openAuth('up');
+        return false;
+    }
+    return true;
+}
+
+// ==================== EARN PAGE ====================
+function renderEarnPage() {
+    var O = [
+        {n:'Torox',i:'T',b:'#6366f1',r:'5.0',c:34},{n:'Ayet Studios',i:'A',b:'#f59e0b',r:'5.0',c:28},
+        {n:'AdGate',i:'AG',b:'#06b6d4',r:'5.0',c:45},{n:'Revenue Universe',i:'RU',b:'#8b5cf6',r:'5.0',c:52},
+        {n:'MM Wall',i:'MM',b:'#ec4899',r:'4.5',c:39},{n:'TimeWall',i:'TW',b:'#14b8a6',r:'3.0',c:31},
+        {n:'Monlix',i:'M',b:'#f43f5e',r:'3.0',c:25},{n:'Lootably',i:'L',b:'#0ea5e9',r:'3.0',c:22},
+        {n:'AdGem',i:'AG',b:'#a855f7',r:'3.0',c:28},{n:'Notik',i:'N',b:'#eab308',r:'3.0',c:19},
+        {n:'BitLabs Offers',i:'BL',b:'#22c55e',r:'3.0',c:40},{n:'AppsPrize',i:'AP',b:'#64748b',r:'3.0',c:33}
+    ];
+    var S = [
+        {n:'CPX Research',i:'CP',b:'#01D676',r:'5.0',c:12},{n:'BitLabs',i:'BL',b:'#3b82f6',r:'5.0',c:15},
+        {n:'Your Surveys',i:'YS',b:'#f97316',r:'5.0',c:22},{n:'TapResearch',i:'TR',b:'#84cc16',r:'3.0',c:18},
+        {n:'Inbrain',i:'IB',b:'#d946ef',r:'3.0',c:14},{n:'Pollfish',i:'PF',b:'#0891b2',r:'3.0',c:10}
+    ];
+    var F = [
+        {n:'Sunshine Island',e:'\uD83C\uDFDD',d:'Match & earn \u2014 Build your island paradise',w:'$391.00',s:'\u2B50 5.0'},
+        {n:'Match Masters',e:'\uD83C\uDFAE',d:'Play duels & win real cash prizes',w:'$280.00',s:'\u2B50 5.0'},
+        {n:'Board Kings',e:'\uD83C\uDFB2',d:'Roll dice, build boards & earn gift cards',w:'$32.00',s:'\u2B50 5.0'},
+        {n:'Dice Dreams',e:'\uD83C\uDFAF',d:'Complete kingdoms & earn up to $250',w:'$250.00',s:'\u2B50 4.5'},
+        {n:'Coin Master',e:'\uD83E\uDE99',d:'Spin, raid & earn free cash rewards',w:'$150.00',s:'\u2B50 4.8'},
+        {n:'Raid Shadow Legends',e:'\u2694',d:'Level up champions & earn big rewards',w:'$120.00',s:'\u2B50 4.5'}
+    ];
+
+    var h = '<h1 class="pt">Get paid for testing apps, games & surveys</h1>';
+    h += '<p class="ps">Earn up to $391 per offer \u2014 1,169 Offers available now</p>';
+
+    h += '<div class="offer-grid">';
+    for(var i=0; i<F.length; i++) {
+        var f = F[i];
+        h += '<div class="offer-card" onclick="handleOfferClick(\'' + f.n + '\')">';
+        h += '<div class="offer-img">' + f.e + '</div>';
+        h += '<div class="offer-body"><h4>' + f.n + '</h4><div class="desc">' + f.d + '</div>';
+        h += '<div class="reward">UP TO ' + f.w + '</div><div class="stars">' + f.s + '</div></div></div>';
+    }
+    h += '</div>';
+
+    h += '<div class="stat-row">';
+    h += '<div class="stat-item"><div class="val">\uD83D\uDCCB</div><div class="lbl" style="font-size:13px;font-weight:600;">1. Choose an offer</div></div>';
+    h += '<div class="stat-item"><div class="val">\u2705</div><div class="lbl" style="font-size:13px;font-weight:600;">2. Complete it</div></div>';
+    h += '<div class="stat-item"><div class="val">\uD83D\uDCB0</div><div class="lbl" style="font-size:13px;font-weight:600;">3. Get Paid</div></div>';
+    h += '</div>';
+
+    h += '<div class="section-title">\uD83C\uDFAF Offer Partners</div><div class="cg">';
+    for(var i=0; i<O.length; i++) {
+        var o = O[i];
+        h += '<div class="cd" onclick="handleOfferClick(\'' + o.n + '\')">';
+        h += '<div class="ci" style="background:' + o.b + ';">' + o.i + '</div>';
+        h += '<div class="info"><h4>' + o.n + '</h4><div class="rt">\u2B50 ' + o.r + ' \u2022 ' + o.c + ' offers</div></div></div>';
+    }
+    h += '</div>';
+
+    h += '<div class="section-title">\uD83D\uDCCA Survey Partners</div><div class="cg">';
+    for(var i=0; i<S.length; i++) {
+        var s = S[i];
+        h += '<div class="cd" onclick="handleSurveyClick(\'' + s.n + '\')">';
+        h += '<div class="ci" style="background:' + s.b + ';">' + s.i + '</div>';
+        h += '<div class="info"><h4>' + s.n + '</h4><div class="rt">\u2B50 ' + s.r + ' \u2022 ' + s.c + ' surveys</div></div></div>';
+    }
+    h += '</div>';
+
+    h += '<div class="stat-row">';
+    h += '<div class="stat-item"><div class="val">' + (90930+Math.floor(Math.random()*1000)).toLocaleString() + '+</div><div class="lbl">Sign ups in past 24 hours</div></div>';
+    h += '<div class="stat-item"><div class="val">$' + (26+Math.random()*10).toFixed(2) + '</div><div class="lbl">Avg. first cash earned</div></div>';
+    h += '<div class="stat-item"><div class="val">$300M+</div><div class="lbl">Total earned on Freecash</div></div>';
+    h += '</div>';
+
+    return h;
+}
+
+function handleOfferClick(name) {
+    if(!requireLogin()) return;
+    var amt = +(Math.random()*15+2).toFixed(2);
+    var tx = {id:'tx-'+Date.now(),type:'earn',desc:name+' - Offer #'+Math.floor(Math.random()*9000+1000),amount:amt,coin:'USD',status:'pending',date:Date.now()};
+    app.transactions.unshift(tx); app.user.coins += Math.floor(amt*1000); saveApp();
+    showToast('\uD83C\uDFAF Started '+name+'! Earn up to $'+amt.toFixed(2),'var(--grn)');
+    setTimeout(function() {
+        tx.status='completed'; app.user.balance+=tx.amount; app.user.totalEarned+=tx.amount;
+        app.user.coins+=Math.floor(tx.amount*100); app.user.offersCompleted=(app.user.offersCompleted||0)+1;
+        saveApp(); updateHeaderBalance();
+        showToast('\u2705 Offer completed! +$'+tx.amount.toFixed(2),'var(--grn)');
+        if(app.currentPage==='wallet') renderPage('wallet');
+    }, 8000);
+}
+
+function handleSurveyClick(name) {
+    if(!requireLogin()) return;
+    var amt = +(Math.random()*5+1).toFixed(2);
+    var tx = {id:'tx-'+Date.now(),type:'earn',desc:name+' - Survey #'+Math.floor(Math.random()*9000+1000),amount:amt,coin:'USD',status:'pending',date:Date.now()};
+    app.transactions.unshift(tx); app.user.coins += Math.floor(amt*1000); saveApp();
+    showToast('\uD83D\uDCCA Taking survey... Earn up to $'+amt,'var(--grn)');
+    setTimeout(function() {
+        tx.status='completed'; app.user.balance+=tx.amount; app.user.totalEarned+=tx.amount;
+        app.user.coins+=Math.floor(tx.amount*100); app.user.offersCompleted=(app.user.offersCompleted||0)+1;
+        saveApp(); updateHeaderBalance();
+        showToast('\u2705 Survey completed! +$'+tx.amount.toFixed(2),'var(--grn)');
+        if(app.currentPage==='wallet') renderPage('wallet');
+    }, 6000);
+}
+
+// ==================== CASHOUT PAGE ====================
+function renderCashoutPage() {
+    var M = [
+        {n:'PayPal',i:'\uD83C\uDFF0'},{n:'Bitcoin',i:'\u20BF'},{n:'Ethereum',i:'\u039E'},
+        {n:'Litecoin',i:'\u0141'},{n:'Dogecoin',i:'\xD0'},{n:'Amazon',i:'\uD83D\uDCE6'},
+        {n:'Visa',i:'\uD83D\uDCB3'},{n:'Google Play',i:'\u25B6'},{n:'Apple',i:'\uD83C\uDF4E'},
+        {n:'Bank Transfer',i:'\uD83C\uDFE6'},{n:'Venmo',i:'\uD83D\uDCF1'},{n:'Starbucks',i:'\u2615'},
+        {n:'Netflix',i:'\uD83C\uDFAC'},{n:'Spotify',i:'\uD83C\uDFB5'},{n:'Steam',i:'\uD83C\uDFAE'},
+        {n:'Uber',i:'\uD83D\uDE97'},{n:'Walmart',i:'\uD83D\uDED2'},{n:'Target',i:'\uD83C\uDFAF'},
+        {n:'Nike',i:'\uD83D\uDC5F'},{n:'DoorDash',i:'\uD83C\uDF54'}
+    ];
+
+    var h = '<h1 class="pt">Cash out your earnings</h1>';
+    h += '<p class="ps">Use your earned coins to get free money, crypto, or gift cards!</p>';
+
+    h += '<div class="how-it-works"><div class="hiw-icon">\uD83D\uDCB0</div>';
+    h += '<h3 style="font-size:20px;margin-bottom:8px;">How Cashout Works</h3>';
+    h += '<p style="color:var(--g);margin-bottom:16px;">You\'re just three easy steps away from getting your rewards!</p>';
+    h += '<div class="stat-row">';
+    h += '<div class="stat-item"><div class="val">1\uFE0F\u20E3</div><div class="lbl" style="font-size:13px;">Select an offer on the Earn page</div></div>';
+    h += '<div class="stat-item"><div class="val">\uD83E\uDE99</div><div class="lbl" style="font-size:13px;">Earn Freecash coins</div></div>';
+    h += '<div class="stat-item"><div class="val">\uD83C\uDF81</div><div class="lbl" style="font-size:13px;">Cash out your rewards here!</div></div>';
+    h += '</div></div>';
+
+    h += '<div class="section-title">\uD83D\uDCB3 Instant Cashout Methods</div>';
+    h += '<div class="cashout-grid">';
+    for(var i=0; i<M.length; i++) {
+        var m = M[i];
+        h += '<div class="cashout-card" onclick="handleCashout(\'' + m.n + '\')">';
+        h += '<div class="co-icon">' + m.i + '</div><div class="co-name">' + m.n + '</div><div class="co-min">Min $5.00</div></div>';
+    }
+    h += '</div>';
+
+    h += '<div style="text-align:center;margin-top:32px;padding:32px;background:var(--card);border-radius:20px;">';
+    h += '<h3 style="font-size:20px;margin-bottom:8px;">Your Balance</h3>';
+    h += '<div style="font-size:42px;font-weight:900;color:var(--grn);">$' + (app.user.balance||0).toFixed(2) + '</div>';
+    h += '<div style="color:var(--g);margin:8px 0;">= ' + (app.user.coins||0).toLocaleString() + ' coins</div>';
+    if(app.user.isLoggedIn) {
+        h += '<button class="btn btn-primary btn-lg" style="margin-top:12px;" onclick="navigate(\'wallet\')">\uD83D\uDCB0 Go to Wallet</button>';
+    } else {
+        h += '<button class="btn btn-primary btn-lg" style="margin-top:12px;" onclick="openAuth(\'up\')">Sign Up to Cash Out</button>';
+    }
+    h += '</div>';
+    return h;
+}
+
+function handleCashout(method) {
+    if(!requireLogin()) return;
+    if(app.user.balance < 5) { showToast('\u26A0 Minimum cashout is $5.00', 'var(--gold)'); return; }
+    var inner = '<p style="margin-bottom:16px;">Cashing out to <strong>' + method + '</strong></p>';
+    inner += '<p style="font-size:14px;color:var(--g);">Available balance: <strong style="color:var(--grn);">$' + app.user.balance.toFixed(2) + '</strong></p>';
+    inner += '<div class="form-group" style="margin-top:16px;"><label>Amount to cash out</label>';
+    inner += '<input type="number" class="form-input" id="cashoutAmount" placeholder="Min $5.00" min="5" max="' + app.user.balance + '" step="0.01" value="' + Math.min(app.user.balance, 25).toFixed(2) + '"/></div>';
+    inner += '<button class="btn btn-primary btn-lg" style="width:100%;" onclick="submitCashout(\'' + method + '\')">Cash Out to ' + method + ' \uD83D\uDE80</button>';
+    $('#cashoutModalContent').innerHTML = inner;
+    openModal('cashoutModal');
+}
+
+function submitCashout(method) {
+    var amt = +($('#cashoutAmount') ? $('#cashoutAmount').value : 0);
+    if(!amt || amt < 5) { showToast('\u26A0 Minimum cashout is $5.00', 'var(--gold)'); return; }
+    if(amt > app.user.balance) { showToast('\u26A0 Insufficient balance', 'var(--red)'); return; }
+    var tx = {id:'tx-'+Date.now(), type:'withdraw', desc:'Cashout to '+method, amount:-amt, coin:'USD', status:'pending', date:Date.now(), address:method};
+    app.transactions.unshift(tx); app.user.balance -= amt; app.user.coins = Math.floor(app.user.balance*1000); saveApp();
+    closeModal('cashoutModal'); showToast('\u2705 Cashing out $' + amt.toFixed(2) + ' to ' + method + '!', 'var(--grn)'); updateHeaderBalance();
+    setTimeout(function() { tx.status='completed'; saveApp(); showToast('\uD83C\uDF89 Cashout complete! $' + amt.toFixed(2) + ' sent to ' + method, 'var(--grn)'); if(app.currentPage==='wallet') renderPage('wallet'); }, 5000);
+}
+
+// ==================== EVENT PAGE ====================
+function renderEventPage() {
+    var L = [
+        {r:'\uD83E\uDD47',n:'CryptoKing',a:'$3,245.00'},{r:'\uD83E\uDD48',n:'SurveyPro99',a:'$2,890.50'},
+        {r:'\uD83E\uDD49',n:'GameMasterX',a:'$2,156.75'},{r:'4',n:'FreeCashFan',a:'$1,890.00'},
+        {r:'5',n:'EarnBig2024',a:'$1,650.25'}
+    ];
+
+    var h = '<div class="evt"><h1>\uD83C\uDFC6 $200,000 Spring Event</h1>';
+    h += '<div class="prz">$1,000</div><p>Complete quests & climb the leaderboard for your share!</p>';
+    if(!app.user.isLoggedIn) {
+        h += '<button class="btn btn-gold btn-lg" style="margin-top:16px;position:relative;" onclick="openAuth(\'up\')">Join Event Now \uD83D\uDE80</button>';
+    } else {
+        h += '<button class="btn btn-gold btn-lg" style="margin-top:16px;position:relative;" onclick="handleEventJoin()">Start Earning Bonus \uD83C\uDFAF</button>';
+    }
+    h += '</div>';
+
+    h += '<div class="stat-row">';
+    h += '<div class="stat-item"><div class="val">$' + (78000+Math.floor(Math.random()*5000)).toLocaleString() + '</div><div class="lbl">Total Won in 7 Days</div></div>';
+    h += '<div class="stat-item"><div class="val">Win up to $1,000</div><div class="lbl">Quest Rewards</div></div>';
+    h += '<div class="stat-item"><div class="val">' + (12000+Math.floor(Math.random()*3000)).toLocaleString() + '</div><div class="lbl">Active Participants</div></div>';
+    h += '</div>';
+
+    h += '<div class="section-title">\uD83D\uDD25 Daily Leaderboard</div>';
+    h += '<div style="background:var(--card);border-radius:16px;padding:24px;">';
+    for(var i=0; i<L.length; i++) {
+        var l = L[i];
+        h += '<div class="leader-row"><div class="leader-rank">' + l.r + '</div><div class="leader-name">' + l.n + '</div><div class="leader-amt">' + l.a + '</div></div>';
+    }
+    if(app.user.isLoggedIn) {
+        h += '<div class="leader-row" style="margin-top:8px;background:rgba(1,214,118,.1);border-radius:10px;padding:12px;">';
+        h += '<div class="leader-rank">' + (Math.floor(Math.random()*50+6)) + '</div>';
+        h += '<div class="leader-name">' + app.user.username + ' (You)</div>';
+        h += '<div class="leader-amt">$' + (app.user.totalEarned||0).toFixed(2) + '</div></div>';
+    }
+    h += '</div>';
+    return h;
+}
+
+function handleEventJoin() {
+    var bonus = +(Math.random()*10+5).toFixed(2);
+    var tx = {id:'tx-'+Date.now(), type:'bonus', desc:'Spring Event Quest Bonus', amount:bonus, coin:'USD', status:'completed', date:Date.now()};
+    app.transactions.unshift(tx); app.user.balance += tx.amount; app.user.totalEarned += tx.amount;
+    app.user.coins += Math.floor(tx.amount*1000); saveApp();
+    updateHeaderBalance(); showToast('\uD83C\uDFC6 Event bonus! +$' + bonus.toFixed(2) + ' added!', 'var(--gold)');
+}
+
+// ==================== WALLET PAGE ====================
+function renderWalletPage() {
+    var bal = app.user.balance || 0, earned = app.user.totalEarned || 0;
+    var depTotal = app.transactions.filter(function(t){return t.type==='deposit'&&t.status==='completed';}).reduce(function(s,t){return s+t.amount;},0);
+    var wdTotal = Math.abs(app.transactions.filter(function(t){return t.type==='withdraw'&&t.status==='completed';}).reduce(function(s,t){return s+t.amount;},0));
+
+    var h = '<h1 class="pt">\uD83D\uDCB0 Wallet</h1><p class="ps">Manage your deposits, withdrawals & transaction history</p>';
+
+    h += '<div class="wallet-bar">';
+    h += '<div class="wallet-card"><div class="wl">Total Balance</div><div class="wv green">$' + bal.toFixed(2) + '</div><div class="wsub">\u2248 ' + bal.toLocaleString() + ' coins</div></div>';
+    h += '<div class="wallet-card"><div class="wl">Total Earned</div><div class="wv">$' + earned.toFixed(2) + '</div><div class="wsub">From offers & bonuses</div></div>';
+    h += '<div class="wallet-card"><div class="wl">Total Deposited</div><div class="wv">$' + depTotal.toFixed(2) + '</div><div class="wsub">Crypto, bank & card</div></div>';
+    h += '<div class="wallet-card"><div class="wl">Total Withdrawn</div><div class="wv">$' + wdTotal.toFixed(2) + '</div><div class="wsub">To cashout methods</div></div>';
+    h += '</div>';
+
+    if(app.user.isLoggedIn) {
+        h += '<div class="wallet-actions">';
+        h += '<button class="btn btn-primary btn-lg" onclick="openModal(\'depositModal\');updateDepositInfo();">\u2B07 Deposit</button>';
+        h += '<button class="btn btn-gold btn-lg" onclick="openModal(\'withdrawModal\');updateWithdrawInfo();">\u2B06 Withdraw</button>';
+        h += '<button class="btn btn-outline btn-lg" onclick="navigate(\'cashout\')">\uD83D\uDCB3 Cash Out</button>';
+        h += '</div>';
+    } else {
+        h += '<div style="text-align:center;padding:24px;background:var(--card);border-radius:14px;margin-bottom:24px;">';
+        h += '<p style="color:var(--g);margin-bottom:12px;">Sign in to deposit, withdraw & manage your wallet</p>';
+        h += '<button class="btn btn-primary btn-lg" onclick="openAuth(\'up\')">Sign Up Now</button></div>';
+    }
+
+    h += '<div class="section-title">\uD83D\uDCCB Transaction History</div>';
+    h += '<div style="background:var(--card);border-radius:16px;overflow-x:auto;">';
+    h += '<table class="tx-table"><thead><tr><th>Type</th><th>Description</th><th>Amount</th><th>Status</th><th>Date</th></tr></thead><tbody id="txBody"></tbody></table></div>';
+    return h;
+}
+
+function renderWalletTransactions() {
+    var tbody = $('#txBody'); if(!tbody) return;
+    var txs = [].concat(app.transactions).sort(function(a,b){return b.date-a.date;}).slice(0,30);
+    var labels = {deposit:'Deposit', withdraw:'Withdraw', earn:'Earn', bonus:'Bonus'};
+    tbody.innerHTML = '';
+    for(var i=0; i<txs.length; i++) {
+        var t = txs[i], cls = t.type || 'earn', lbl = labels[t.type] || t.type;
+        var amtC = t.amount >= 0 ? 'color:var(--grn);' : 'color:var(--red);';
+        var ds = new Date(t.date).toLocaleDateString('en-US', {month:'short', day:'numeric', year:'numeric'});
+        tbody.innerHTML += '<tr><td><span class="tx-badge ' + cls + '">' + lbl + '</
+span></td><td>' + t.desc + '</td><td style="' + amtC + 'font-weight:700;">' + (t.amount>=0?'+':'') + '$' + Math.abs(t.amount).toFixed(2) + '</td><td><span class="tx-status ' + t.status + '">' + t.status.charAt(0).toUpperCase()+t.status.slice(1) + '</span></td><td>' + ds + '</td></tr>';
+    }
+    if(txs.length===0) { tbody.innerHTML = '<tr><td colspan="5" style="text-align:center;color:var(--g);padding:24px;">No transactions yet. Start earning!</td></tr>'; }
+}
+
+// ==================== PROFILE PAGE ====================
+function renderProfilePage() {
+    var u = app.user;
+    var h = '<div class="profile-hero"><div class="avatar">' + u.username.charAt(0).toUpperCase() + '</div>';
+    h += '<div class="username">' + u.username + '</div><div class="email">' + u.email + '</div>';
+    h += '<div class="level-badge">\u2B50 Level ' + u.level + '</div></div>';
+    h += '<div class="stat-row">';
+    h += '<div class="stat-item"><div class="val">' + (u.coins||0).toLocaleString() + '</div><div class="lbl">Coins</div></div>';
+    h += '<div class="stat-item"><div class="val">$' + (u.totalEarned||0).toFixed(2) + '</div><div class="lbl">Total Earnings</div></div>';
+    h += '<div class="stat-item"><div class="val">Lvl ' + u.level + '</div><div class="lbl">Level</div></div>';
+    h += '</div>';
+    if(!u.isLoggedIn) {
+        h += '<div style="text-align:center;padding:24px;"><button class="btn btn-primary btn-lg" onclick="openAuth(\'up\')">Sign Up to Track Earnings</button></div>';
+    } else {
+        h += '<div style="text-align:center;margin-top:16px;display:flex;gap:10px;justify-content:center;flex-wrap:wrap;">';
+        h += '<button class="btn btn-danger btn-lg" onclick="logout()">Logout</button>';
+        h += '<button class="btn btn-outline btn-lg" onclick="navigate(\'wallet\')">\uD83D\uDCB0 Wallet</button>';
+        h += '</div>';
+    }
+    return h;
+}
+
+// ==================== DEPOSIT ====================
+var depositAddresses = {
+    BTC: 'bc1qar0srrr7xfkvy5l643lydnw9re59gtzzwf5mdq',
+    ETH: '0x742d35Cc6634C0532925a3b844Bc9e3f1a8a3b2',
+    SOL: '7EcDhSYGxXysghAFoRLpGoVSGJzvNRuCHPzLmRWDNiKV',
+    USDT: '0x742d35Cc6634C0532925a3b844Bc9e3f1a8a3b2',
+    USDC: '0x742d35Cc6634C0532925a3b844Bc9e3f1a8a3b2',
+    LTC: 'LbvVNYpBjcD7iNuJ8qXcDrbM6nESQpLhQF',
+    DOGE: 'D8RJURBhNk2KKKbPQX4TvNrPtYuKZztq7P'
+};
+var depositIcons = {BTC:'\u20BF',ETH:'\u039E',SOL:'\u25CE',USDT:'\u20AE',USDC:'\u25CE',LTC:'\u0141',DOGE:'\xD0'};
+
+function updateDepositInfo() {
+    var coinEl = $('#depositCoin'); if(!coinEl) return;
+    var coin = coinEl.value;
+    var addrEl = $('#depositAddress'); if(addrEl) addrEl.value = depositAddresses[coin] || '';
+    var nameEl = $('#depositCoinName'); if(nameEl) nameEl.textContent = coin;
+    var iconEl = $('#depositCoinIcon'); if(iconEl) iconEl.textContent = depositIcons[coin] || coin;
+}
+
+function switchDepositTab(tab, btn) {
+    $$('.tab-btn').forEach(function(b){b.classList.remove('active');});
+    btn.classList.add('active');
+    $$('.tab-panel').forEach(function(p){p.classList.remove('active');});
+    var panel = $('#deposit' + tab.charAt(0).toUpperCase() + tab.slice(1));
+    if(panel) panel.classList.add('active');
+}
+
+function copyAddress() {
+    var addr = $('#depositAddress'); if(!addr) return;
+    addr.select(); document.execCommand('copy');
+    showToast('\uD83D\uDCCB Address copied!', 'var(--grn)');
+}
+
+function submitCryptoDeposit() {
+    var coinEl = $('#depositCoin'), amtEl = $('#cryptoDepositAmount');
+    var coin = coinEl ? coinEl.value : 'BTC';
+    var amt = amtEl ? parseFloat(amtEl.value) : 0;
+    if(!amt || amt <= 0) { showToast('\u26A0 Please enter a valid amount', 'var(--gold)'); return; }
+    var usdVal = {BTC:67234,ETH:3448,SOL:187.56,USDT:1,USDC:1,LTC:72.50,DOGE:0.125}[coin]||1;
+    var usdAmt = amt * usdVal;
+    var tx = {id:'tx-'+Date.now(), type:'deposit', desc:'Crypto Deposit - '+amt.toFixed(6)+' '+coin, amount:usdAmt, coin:coin, status:'pending', date:Date.now(), address:depositAddresses[coin]||''};
+    app.transactions.unshift(tx);
+    app.assets[coin] = (app.assets[coin]||0) + amt;
+    saveApp();
+    closeModal('depositModal');
+    showToast('\u2705 Deposit of '+amt.toFixed(6)+' '+coin+' submitted! (~$'+usdAmt.toFixed(2)+')', 'var(--grn)');
+    setTimeout(function() {
+        tx.status='completed'; app.user.balance+=usdAmt; app.user.coins=Math.floor(app.user.balance*1000); saveApp();
+        updateHeaderBalance(); showToast('\uD83C\uDF89 Deposit confirmed! +$'+usdAmt.toFixed(2),'var(--grn)');
+        if(app.currentPage==='wallet') renderPage('wallet');
+    }, 5000);
+}
+
+function submitFiatDeposit() {
+    var amtEl = $('#fiatAmount'); var amt = amtEl ? parseFloat(amtEl.value) : 0;
+    if(!amt || amt < 10) { showToast('\u26A0 Minimum deposit is $10 via ACH', 'var(--gold)'); return; }
+    var tx = {id:'tx-'+Date.now(), type:'deposit', desc:'ACH Bank Transfer', amount:amt, coin:'USD', status:'pending', date:Date.now(), address:'Bank Account'};
+    app.transactions.unshift(tx); saveApp();
+    closeModal('depositModal');
+    showToast('\u2705 ACH deposit of $'+amt.toFixed(2)+' initiated! (1-3 business days)', 'var(--grn)');
+    setTimeout(function() { tx.status='completed'; app.user.balance+=amt; app.user.coins=Math.floor(app.user.balance*1000); saveApp(); updateHeaderBalance(); showToast('\uD83C\uDF89 ACH deposit complete! +$'+amt.toFixed(2),'var(--grn)'); if(app.currentPage==='wallet')renderPage('wallet'); }, 8000);
+}
+
+function submitCardDeposit() {
+    var amtEl = $('#cardAmount'); var amt = amtEl ? parseFloat(amtEl.value) : 0;
+    if(!amt || amt < 10) { showToast('\u26A0 Minimum deposit is $10 via card', 'var(--gold)'); return; }
+    var fee = amt * 0.035, net = amt - fee;
+    var tx = {id:'tx-'+Date.now(), type:'deposit', desc:'Card Deposit (3.5% fee)', amount:net, coin:'USD', status:'completed', date:Date.now(), address:'Credit Card'};
+    app.transactions.unshift(tx); app.user.balance+=net; app.user.coins=Math.floor(app.user.balance*1000); saveApp();
+    closeModal('depositModal'); updateHeaderBalance();
+    showToast('\u2705 $'+amt.toFixed(2)+' deposited via card! Fee: $'+fee.toFixed(2), 'var(--grn)');
+    if(app.currentPage==='wallet') renderPage('wallet');
+}
+
+// ==================== WITHDRAW ====================
+function updateWithdrawInfo() {
+    var wUSD=$('#wUSD'),wBTC=$('#wBTC'),wETH=$('#wETH'),wSOL=$('#wSOL'),wUSDT=$('#wUSDT'),wLTC=$('#wLTC');
+    if(wUSD) wUSD.textContent=(app.user.balance||0).toFixed(2);
+    if(wBTC) wBTC.textContent=(app.assets.BTC||0).toFixed(8);
+    if(wETH) wETH.textContent=(app.assets.ETH||0).toFixed(6);
+    if(wSOL) wSOL.textContent=(app.assets.SOL||0).toFixed(4);
+    if(wUSDT) wUSDT.textContent=(app.assets.USDT||0).toFixed(2);
+    if(wLTC) wLTC.textContent=(app.assets.LTC||0).toFixed(6);
+    updateFeeHint();
+}
+
+function setMaxWithdraw() {
+    var asset = $('#withdrawAsset'); if(!asset) return;
+    var coin = asset.value;
+    var maxMap = {USD:app.user.balance||0, BTC:app.assets.BTC||0, ETH:app.assets.ETH||0, SOL:app.assets.SOL||0, USDT:app.assets.USDT||0, LTC:app.assets.LTC||0};
+    var amtEl = $('#withdrawAmount'); if(amtEl) amtEl.value = maxMap[coin]||0;
+    updateFeeHint();
+}
+
+function updateFeeHint() {
+    var assetEl = $('#withdrawAsset'), amtEl = $('#withdrawAmount'), feeEl = $('#feeHint');
+    if(!assetEl||!feeEl) return;
+    var coin = assetEl.value, amt = parseFloat(amtEl?amtEl.value:0)||0;
+    var feeMap = {BTC:0.0005, ETH:0.002, SOL:0.01, USDT:3.0, USD:0, LTC:0.001};
+    var usdPrices = {BTC:67234, ETH:3448, SOL:187.56, USDT:1, USD:1, LTC:72.5};
+    var fee = feeMap[coin]||0, receive = amt - fee;
+    if(coin==='USD') { feeEl.textContent = 'No fee \u2022 Will arrive in 1-3 business days'; }
+    else { feeEl.textContent = 'Network fee: ~'+fee+' '+coin+' \u2022 You\'ll receive: '+receive.toFixed(6)+' '+coin+' (~$'+(receive*(usdPrices[coin]||1)).toFixed(2)+')'; }
+}
+
+function submitWithdraw() {
+    var assetEl = $('#withdrawAsset'), amtEl = $('#withdrawAmount'), addrEl = $('#withdrawAddress'), confirmEl = $('#withdrawConfirm'), errEl = $('#withdrawError');
+    var coin = assetEl ? assetEl.value : 'USD';
+    var amt = amtEl ? parseFloat(amtEl.value) : 0;
+    var addr = addrEl ? addrEl.value.trim() : '';
+    if(!amt||amt<=0) { if(errEl) { errEl.textContent='Please enter a valid amount.'; errEl.classList.add('show'); } return; }
+    if(!addr) { if(errEl) { errEl.textContent='Please enter a destination address or account.'; errEl.classList.add('show'); } return; }
+    if(confirmEl && !confirmEl.checked) { if(errEl) { errEl.textContent='Please confirm the withdrawal address is correct.'; errEl.classList.add('show'); } return; }
+    if(errEl) errEl.classList.remove('show');
+
+    var usdPrices = {BTC:67234, ETH:3448, SOL:187.56, USDT:1, USD:1, LTC:72.5};
+    var maxMap = {USD:app.user.balance||0, BTC:app.assets.BTC||0, ETH:app.assets.ETH||0, SOL:app.assets.SOL||0, USDT:app.assets.USDT||0, LTC:app.assets.LTC||0};
+    if(amt > (maxMap[coin]||0)) { if(errEl) { errEl.textContent='Insufficient balance.'; errEl.classList.add('show'); } return; }
+
+    var usdAmt = amt * (usdPrices[coin]||1);
+    var tx = {id:'tx-'+Date.now(), type:'withdraw', desc:'Withdraw '+amt.toFixed(6)+' '+coin, amount:-usdAmt, coin:coin, status:'pending', date:Date.now(), address:addr};
+    app.transactions.unshift(tx);
+    if(coin==='USD') app.user.balance -= amt;
+    else app.assets[coin] -= amt;
+    app.user.coins = Math.floor(app.user.balance*1000);
+    saveApp();
+    closeModal('withdrawModal');
+    showToast('\u2705 Withdrawal of '+amt.toFixed(6)+' '+coin+' submitted!', 'var(--grn)');
+    updateHeaderBalance();
+    setTimeout(function() { tx.status='completed'; saveApp(); showToast('\uD83C\uDF89 Withdrawal complete! -$'+usdAmt.toFixed(2), 'var(--red)'); if(app.currentPage==='wallet')renderPage('wallet'); }, 6000);
+}
+
+// ==================== INIT ====================
+document.addEventListener('DOMContentLoaded', function() {
+    renderPage(app.currentPage || 'earn');
+    updateHeaderBalance();
+    updateDepositInfo();
+    updateWithdrawInfo();
+});
+
+
+
+</script>
+<script defer src="https://static.cloudflareinsights.com/beacon.min.js/v4513226cdae34746b4dedf0b4dfa099e1781791509496" integrity="sha512-ZE9pZaUXND66v380QUtch/5sE9tPFh2zg45pR2PB0CVkCtOREv2AJKkSidISWkysEuQ0EH8faUU5du78bx87UQ==" data-cf-beacon='{"version":"2024.11.0","token":"3279d41ec7804124a29acc6e692f9a2b","server_timing":{"name":{"cfCacheStatus":true,"cfEdge":true,"cfExtPri":true,"cfL4":true,"cfOrigin":true,"cfSpeedBrain":true},"location_startswith":null}}' crossorigin="anonymous"></script>
+</body>
+</html>
